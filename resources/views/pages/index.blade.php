@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-{!!Form::open(['url'=>'flights']) !!}
+{!!Form::open() !!}
 
     <div class="form-group">
        {!! Form::label('departure','Flying from * : ') !!}

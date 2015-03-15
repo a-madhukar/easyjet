@@ -14,5 +14,5 @@
 
 Route::get('/','HomeController@index'); 
 Route::get('/choose','HomeController@choose');
-Route::get('/index.php/test','HomeController@test'); 
+Route::get('test','HomeController@test'); 
 Route::post('/','HomeController@search'); 
