@@ -30,6 +30,11 @@ class HomeController extends Controller {
             return view('pages.chooseflight'); 
         }
         
+        public function test()
+        {
+            return views('pages.chooseflight'); 
+        }
+        
         public function search()
         {
             $input = Request::all(); 
