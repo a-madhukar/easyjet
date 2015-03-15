@@ -15,4 +15,4 @@
 Route::get('/','HomeController@index'); 
 Route::get('/choose','HomeController@choose');
 Route::get('test','HomeController@test'); 
-Route::post('/','HomeController@search'); 
+Route::post('flight','HomeController@search'); 
