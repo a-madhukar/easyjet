@@ -12,7 +12,7 @@ class CreateArrivalDeparture extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('arrival_departure', function(Blueprint $table)
+		Schema::create('arrival__departures', function(Blueprint $table)
 		{
 			$table->increments('id');
                            $table->integer('arrival_id')->unsigned();

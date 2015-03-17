@@ -17,23 +17,23 @@
     </p>
     
     <p class="simple_padding">
-        Outbound:
+        Outbound: {{$routes->departure_date}}
     </p>
     
     <p class="simple_padding">
-        Return: 
+        Return: {{$routes->arrival_date}}
     </p>
     
     <p class="simple_padding">
-        Date: 
+        Departure Time: {{$routes->departure_time}}
     </p>
     
     <p class="simple_padding">
-        Time:
+        Arrival Time: {{$routes->arrival_time}}
     </p>
     
     <p class="simple_padding">
-        Price: 
+        Price: $450
     </p>
     
     <p class="simple_padding">

@@ -16,7 +16,7 @@ class Arrival extends Model {
     
     public function departures()
     {
-        return $this->belongsToMany('App\Departure')->withTimestamps(); 
+        return $this->belongsToMany('App\Departure','arrival__departures')->withTimestamps(); 
     }
 
 }

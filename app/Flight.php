@@ -9,5 +9,10 @@ class Flight extends Model {
         'flight_name',
         'capacity'
     ];
+    
+    public function arrival_departures()
+    {
+        return $this->belongsToMany('App\Arrival_Departure','arrival__departure__flights','arrival_departure_id')->withTimestamps(); 
+    }
 
 }

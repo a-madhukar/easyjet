@@ -43,10 +43,20 @@ class HomeController extends Controller {
             
            // $pivot = DB::table('arrival_departure')->where('arrival_id','=',$input['arrival'])->where('departure_id','=',$input['departure'])->get();
            
-            $query=DB::table('arrival_departure')
-                    ->join('arrivals','arrival_departure.arrival_id','=','arrivals.id')
-                    ->join('departures','arrival_departure.departure_id','=','departures.id')
-                    ->select('departures.city as departure_city','departures.country as departure_country', 'arrivals.city as arrival_city','arrivals.country as arrival_country')
+            $query=DB::table('arrival__departure__flights')
+                    ->join('arrival__departures','arrival__departure__flights.arrival_departure_id','=','arrival__departures.id')
+                    ->join('arrivals','arrival__departures.arrival_id','=','arrivals.id')
+                    ->join('departures','arrival__departures.departure_id','=','departures.id')
+                    ->join('flights','arrival__departure__flights.flight_id','=','flights.id')
+                    ->select('departures.city as departure_city',
+                            'departures.country as departure_country', 
+                            'arrivals.city as arrival_city',
+                            'arrivals.country as arrival_country',
+                            'arrival__departure__flights.departure_date',
+                            'arrival__departure__flights.arrival_date',
+                            'arrival__departure__flights.departure_time',
+                            'arrival__departure__flights.arrival_time',
+                            'flights.flight_name as flight_name')
                     ->where('departures.id','=',$input['departure'])
                     ->where('arrivals.id','=',$input['arrival'])
                     ->get();
