@@ -33,7 +33,7 @@
     </p>
     
     <p class="simple_padding">
-        Price: $450
+        Price: ${{$price}}
     </p>
     
     <p class="simple_padding">

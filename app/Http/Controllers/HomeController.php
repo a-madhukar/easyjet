@@ -61,9 +61,9 @@ class HomeController extends Controller {
                     ->where('arrivals.id','=',$input['arrival'])
                     ->get();
             
-            //return $query; 
+            $price = $input['adults']*450; 
             
-            return view('pages.chooseflight',compact('query')); 
+            return view('pages.chooseflight',compact('query','price')); 
         }
         
 	/**
